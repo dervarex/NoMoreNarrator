@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "nomorenarrator",
+  "version": "${version}",
+  "name": "NoMoreNarrator",
+  "description": "Removes the narrator",
+  "authors": [],
+  "contact": {},
+  "license": "MIT",
+  "icon": "assets/nomorenarrator/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "fabric-datagen": [
+      "com.dervarex.nomorenarrator.client.NomorenarratorDataGenerator"
+    ],
+    "client": [
+      "com.dervarex.nomorenarrator.client.NomorenarratorClient"
+    ],
+    "main": [
+      "com.dervarex.nomorenarrator.Nomorenarrator"
+    ]
+  },
+  "mixins": [
+    "nomorenarrator.mixins.json",
+    {
+      "config": "nomorenarrator.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric-api": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}

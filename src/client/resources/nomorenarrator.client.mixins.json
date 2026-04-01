@@ -1,0 +1,15 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.dervarex.nomorenarrator.mixin.client",
+  "compatibilityLevel": "JAVA_21",
+  "client": [
+    "NarratorManagerMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "overwrites": {
+    "requireAnnotations": true
+  }
+}
