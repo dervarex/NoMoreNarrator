@@ -17,7 +17,7 @@ Download the latest release from [Modrinth](https://github.com/deinname/NoMoreNa
 This repository uses separate branches for each Minecraft version, as the Gradle properties are different for each version. (even if the logic doesn't change)
 
 - `master` — Contains only this README (landing page).
-- `main` — Active development for the latest version (26.4)
+- `26.4` — Active development for the latest version (26.4)
 - `26.1` — Code and build files for Minecraft 26.1
 - `26.2` — Code and build files for Minecraft 26.2
 - `26.3` — Code and build files for Minecraft 26.3
