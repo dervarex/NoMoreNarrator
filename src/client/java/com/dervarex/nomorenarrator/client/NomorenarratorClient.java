@@ -12,20 +12,15 @@ public class NomorenarratorClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
+            // Narrator off
             if (client.options.getNarrator().getValue() != NarratorMode.OFF) {
                 client.options.getNarrator().setValue(NarratorMode.OFF);
             }
 
-            var window = client.getWindow();
-            boolean ctrlDown = InputUtil.isKeyPressed(window, GLFW.GLFW_KEY_LEFT_CONTROL)
-                    || InputUtil.isKeyPressed(window, GLFW.GLFW_KEY_RIGHT_CONTROL);
-            boolean narratorShortcutDown = ctrlDown && InputUtil.isKeyPressed(window, GLFW.GLFW_KEY_B);
-
-            if (narratorShortcutDown && !narratorShortcutHeld) {
-                client.options.getNarrator().setValue(NarratorMode.OFF);
+            // deactivate hotkey
+            if (client.options.getNarratorHotkey().getValue()) {
+                client.options.getNarratorHotkey().setValue(false);
             }
-
-            narratorShortcutHeld = narratorShortcutDown;
         });
     }
 }
