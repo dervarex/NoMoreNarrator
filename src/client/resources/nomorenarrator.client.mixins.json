@@ -4,7 +4,8 @@
   "package": "com.dervarex.nomorenarrator.mixin.client",
   "compatibilityLevel": "JAVA_21",
   "client": [
-    "NarratorManagerMixin"
+    "NarratorManagerMixin",
+    "KeyboardMixin"
   ],
   "injectors": {
     "defaultRequire": 1
