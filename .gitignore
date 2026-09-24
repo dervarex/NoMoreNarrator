@@ -1,5 +1,11 @@
-# Project exclude paths
+# Gradle/Building
 /.gradle/
 /build/
-/build/classes/java/client/
-/build/classes/java/main/
+
+# Fabric
+/run/
+*.log
+
+# IDE
+.idea/
+.vscode/
